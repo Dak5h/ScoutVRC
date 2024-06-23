@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyCo-I-Ap5Q9ZHyNp2E5mCczEeAiNO3Iepk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>262648052629</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>daksh.ScoutVRC</string>
+	<key>PROJECT_ID</key>
+	<string>vexapp-a6eba</string>
+	<key>STORAGE_BUCKET</key>
+	<string>vexapp-a6eba.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:262648052629:ios:9eb063643323436c3cd49c</string>
+</dict>
+</plist>

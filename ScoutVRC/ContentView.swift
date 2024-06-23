@@ -8,14 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    // Classes
+    @StateObject private var togglePages = TogglePages()
+    @StateObject private var authManager = AuthManager()
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Group {
+                if authManager.isAuthenticated {
+                    Home_Page()
+                } else {
+                    if togglePages.isLoginPage {
+                        Login_Page(togglePages: togglePages)
+                    } else {
+                        Register_Page(togglePages: togglePages)
+                    }
+                }
+            }
         }
-        .padding()
     }
 }
 

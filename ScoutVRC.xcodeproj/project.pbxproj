@@ -7,19 +7,73 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3027A0162C1DF36D00CDA060 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3027A0152C1DF36D00CDA060 /* GoogleService-Info.plist */; };
+		3027A0182C1DF41600CDA060 /* Register Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027A0172C1DF41600CDA060 /* Register Page.swift */; };
+		3027A01C2C1DF7D900CDA060 /* Home Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027A01B2C1DF7D900CDA060 /* Home Page.swift */; };
+		3027A01F2C1DFC8F00CDA060 /* Side Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027A01E2C1DFC8F00CDA060 /* Side Menu.swift */; };
+		3027A0212C1DFC9600CDA060 /* Side Menu Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027A0202C1DFC9600CDA060 /* Side Menu Row.swift */; };
+		3027A0242C1DFCB100CDA060 /* Side Menu Option Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027A0232C1DFCB100CDA060 /* Side Menu Option Model.swift */; };
+		3027A02F2C1DFDB800CDA060 /* Favorites Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027A02E2C1DFDB800CDA060 /* Favorites Page.swift */; };
+		3027A0322C1DFDDC00CDA060 /* Search Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027A0312C1DFDDC00CDA060 /* Search Page.swift */; };
+		3027A0372C1DFE2800CDA060 /* World Skills Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027A0362C1DFE2800CDA060 /* World Skills Page.swift */; };
+		3027A03A2C1DFE3E00CDA060 /* True Skill Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027A0392C1DFE3E00CDA060 /* True Skill Page.swift */; };
+		3027A03D2C1DFE6200CDA060 /* Scouting Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027A03C2C1DFE6200CDA060 /* Scouting Page.swift */; };
+		3027A0402C1DFE7600CDA060 /* Chat Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027A03F2C1DFE7600CDA060 /* Chat Page.swift */; };
+		3027A0432C1DFE9500CDA060 /* Manual Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027A0422C1DFE9500CDA060 /* Manual Page.swift */; };
+		3027A0462C1DFEB100CDA060 /* Settings Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027A0452C1DFEB100CDA060 /* Settings Page.swift */; };
+		3027A0492C1DFF5200CDA060 /* RequestWorldSkills.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027A0482C1DFF5200CDA060 /* RequestWorldSkills.swift */; };
+		3027A04B2C1DFF9A00CDA060 /* World Skills Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027A04A2C1DFF9A00CDA060 /* World Skills Model.swift */; };
+		3027A04E2C1E4D3300CDA060 /* Event Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027A04D2C1E4D3300CDA060 /* Event Component.swift */; };
+		3027A0502C1E4D5700CDA060 /* Team Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027A04F2C1E4D5700CDA060 /* Team Component.swift */; };
+		3027A0532C1E4E8300CDA060 /* Search Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027A0522C1E4E8300CDA060 /* Search Request.swift */; };
+		3027A0552C1E500800CDA060 /* Events Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027A0542C1E500800CDA060 /* Events Model.swift */; };
+		3027A0592C27AEAB00CDA060 /* Event Home Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027A0582C27AEAB00CDA060 /* Event Home Page.swift */; };
+		3027A05B2C28B97400CDA060 /* Event Teams Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027A05A2C28B97400CDA060 /* Event Teams Page.swift */; };
 		309E83FE2C1CE1A7004CDECF /* ScoutVRCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309E83FD2C1CE1A7004CDECF /* ScoutVRCApp.swift */; };
 		309E84002C1CE1A7004CDECF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309E83FF2C1CE1A7004CDECF /* ContentView.swift */; };
 		309E84022C1CE1A9004CDECF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 309E84012C1CE1A9004CDECF /* Assets.xcassets */; };
 		309E84062C1CE1A9004CDECF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 309E84052C1CE1A9004CDECF /* Preview Assets.xcassets */; };
+		309E84122C1CE395004CDECF /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 309E84112C1CE395004CDECF /* FirebaseAuth */; };
+		309E84142C1CE395004CDECF /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 309E84132C1CE395004CDECF /* FirebaseFirestore */; };
+		309E84162C1CE395004CDECF /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 309E84152C1CE395004CDECF /* FirebaseFirestoreSwift */; };
+		309E84182C1CE395004CDECF /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 309E84172C1CE395004CDECF /* FirebaseStorage */; };
+		309E841E2C1CE760004CDECF /* Login Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309E841D2C1CE760004CDECF /* Login Page.swift */; };
+		309E84212C1CE82D004CDECF /* Toggle Pages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309E84202C1CE82D004CDECF /* Toggle Pages.swift */; };
+		309E84232C1CE851004CDECF /* Auth Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309E84222C1CE851004CDECF /* Auth Manager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3027A0152C1DF36D00CDA060 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3027A0172C1DF41600CDA060 /* Register Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Register Page.swift"; sourceTree = "<group>"; };
+		3027A01B2C1DF7D900CDA060 /* Home Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home Page.swift"; sourceTree = "<group>"; };
+		3027A01E2C1DFC8F00CDA060 /* Side Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Side Menu.swift"; sourceTree = "<group>"; };
+		3027A0202C1DFC9600CDA060 /* Side Menu Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Side Menu Row.swift"; sourceTree = "<group>"; };
+		3027A0232C1DFCB100CDA060 /* Side Menu Option Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Side Menu Option Model.swift"; sourceTree = "<group>"; };
+		3027A02E2C1DFDB800CDA060 /* Favorites Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favorites Page.swift"; sourceTree = "<group>"; };
+		3027A0312C1DFDDC00CDA060 /* Search Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Search Page.swift"; sourceTree = "<group>"; };
+		3027A0362C1DFE2800CDA060 /* World Skills Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "World Skills Page.swift"; sourceTree = "<group>"; };
+		3027A0392C1DFE3E00CDA060 /* True Skill Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "True Skill Page.swift"; sourceTree = "<group>"; };
+		3027A03C2C1DFE6200CDA060 /* Scouting Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scouting Page.swift"; sourceTree = "<group>"; };
+		3027A03F2C1DFE7600CDA060 /* Chat Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chat Page.swift"; sourceTree = "<group>"; };
+		3027A0422C1DFE9500CDA060 /* Manual Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Manual Page.swift"; sourceTree = "<group>"; };
+		3027A0452C1DFEB100CDA060 /* Settings Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Settings Page.swift"; sourceTree = "<group>"; };
+		3027A0482C1DFF5200CDA060 /* RequestWorldSkills.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestWorldSkills.swift; sourceTree = "<group>"; };
+		3027A04A2C1DFF9A00CDA060 /* World Skills Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "World Skills Model.swift"; sourceTree = "<group>"; };
+		3027A04D2C1E4D3300CDA060 /* Event Component.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event Component.swift"; sourceTree = "<group>"; };
+		3027A04F2C1E4D5700CDA060 /* Team Component.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Team Component.swift"; sourceTree = "<group>"; };
+		3027A0522C1E4E8300CDA060 /* Search Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Search Request.swift"; sourceTree = "<group>"; };
+		3027A0542C1E500800CDA060 /* Events Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Events Model.swift"; sourceTree = "<group>"; };
+		3027A0582C27AEAB00CDA060 /* Event Home Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event Home Page.swift"; sourceTree = "<group>"; };
+		3027A05A2C28B97400CDA060 /* Event Teams Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event Teams Page.swift"; sourceTree = "<group>"; };
 		309E83FA2C1CE1A7004CDECF /* ScoutVRC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScoutVRC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		309E83FD2C1CE1A7004CDECF /* ScoutVRCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoutVRCApp.swift; sourceTree = "<group>"; };
 		309E83FF2C1CE1A7004CDECF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		309E84012C1CE1A9004CDECF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		309E84032C1CE1A9004CDECF /* ScoutVRC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ScoutVRC.entitlements; sourceTree = "<group>"; };
 		309E84052C1CE1A9004CDECF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		309E841D2C1CE760004CDECF /* Login Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login Page.swift"; sourceTree = "<group>"; };
+		309E84202C1CE82D004CDECF /* Toggle Pages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Toggle Pages.swift"; sourceTree = "<group>"; };
+		309E84222C1CE851004CDECF /* Auth Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Auth Manager.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +81,240 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				309E84122C1CE395004CDECF /* FirebaseAuth in Frameworks */,
+				309E84182C1CE395004CDECF /* FirebaseStorage in Frameworks */,
+				309E84142C1CE395004CDECF /* FirebaseFirestore in Frameworks */,
+				309E84162C1CE395004CDECF /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3027A0192C1DF7C200CDA060 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3027A0222C1DFCA600CDA060 /* Backend */,
+				3027A01D2C1DFC8200CDA060 /* Components */,
+				3027A01A2C1DF7D000CDA060 /* Pages */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		3027A01A2C1DF7D000CDA060 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				3027A01B2C1DF7D900CDA060 /* Home Page.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		3027A01D2C1DFC8200CDA060 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				3027A01E2C1DFC8F00CDA060 /* Side Menu.swift */,
+				3027A0202C1DFC9600CDA060 /* Side Menu Row.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		3027A0222C1DFCA600CDA060 /* Backend */ = {
+			isa = PBXGroup;
+			children = (
+				3027A0232C1DFCB100CDA060 /* Side Menu Option Model.swift */,
+			);
+			path = Backend;
+			sourceTree = "<group>";
+		};
+		3027A0252C1DFD6F00CDA060 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				3027A02D2C1DFDAB00CDA060 /* Pages */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		3027A0262C1DFD7800CDA060 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				3027A0512C1E4E7000CDA060 /* Backend */,
+				3027A04C2C1E4D2400CDA060 /* Components */,
+				3027A0302C1DFDCD00CDA060 /* Pages */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		3027A0272C1DFD7E00CDA060 /* World Skills */ = {
+			isa = PBXGroup;
+			children = (
+				3027A0472C1DFF4100CDA060 /* Backend */,
+				3027A0332C1DFDED00CDA060 /* Pages */,
+			);
+			path = "World Skills";
+			sourceTree = "<group>";
+		};
+		3027A0282C1DFD8400CDA060 /* True Skill */ = {
+			isa = PBXGroup;
+			children = (
+				3027A0382C1DFE3600CDA060 /* Pages */,
+			);
+			path = "True Skill";
+			sourceTree = "<group>";
+		};
+		3027A0292C1DFD8B00CDA060 /* Scouting */ = {
+			isa = PBXGroup;
+			children = (
+				3027A03B2C1DFE5200CDA060 /* Pages */,
+			);
+			path = Scouting;
+			sourceTree = "<group>";
+		};
+		3027A02A2C1DFD9800CDA060 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				3027A03E2C1DFE6E00CDA060 /* Pages */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		3027A02B2C1DFD9D00CDA060 /* Manual */ = {
+			isa = PBXGroup;
+			children = (
+				3027A0412C1DFE8700CDA060 /* Pages */,
+			);
+			path = Manual;
+			sourceTree = "<group>";
+		};
+		3027A02C2C1DFDA300CDA060 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				3027A0442C1DFEA900CDA060 /* Pages */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		3027A02D2C1DFDAB00CDA060 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				3027A02E2C1DFDB800CDA060 /* Favorites Page.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		3027A0302C1DFDCD00CDA060 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				3027A0312C1DFDDC00CDA060 /* Search Page.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		3027A0332C1DFDED00CDA060 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				3027A0362C1DFE2800CDA060 /* World Skills Page.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		3027A0382C1DFE3600CDA060 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				3027A0392C1DFE3E00CDA060 /* True Skill Page.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		3027A03B2C1DFE5200CDA060 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				3027A03C2C1DFE6200CDA060 /* Scouting Page.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		3027A03E2C1DFE6E00CDA060 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				3027A03F2C1DFE7600CDA060 /* Chat Page.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		3027A0412C1DFE8700CDA060 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				3027A0422C1DFE9500CDA060 /* Manual Page.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		3027A0442C1DFEA900CDA060 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				3027A0452C1DFEB100CDA060 /* Settings Page.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		3027A0472C1DFF4100CDA060 /* Backend */ = {
+			isa = PBXGroup;
+			children = (
+				3027A0482C1DFF5200CDA060 /* RequestWorldSkills.swift */,
+				3027A04A2C1DFF9A00CDA060 /* World Skills Model.swift */,
+			);
+			path = Backend;
+			sourceTree = "<group>";
+		};
+		3027A04C2C1E4D2400CDA060 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				3027A0572C27AE9700CDA060 /* Team Details */,
+				3027A0562C27AE8C00CDA060 /* Events Details */,
+				3027A04D2C1E4D3300CDA060 /* Event Component.swift */,
+				3027A04F2C1E4D5700CDA060 /* Team Component.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		3027A0512C1E4E7000CDA060 /* Backend */ = {
+			isa = PBXGroup;
+			children = (
+				3027A0522C1E4E8300CDA060 /* Search Request.swift */,
+				3027A05C2C28BA6C00CDA060 /* Model */,
+			);
+			path = Backend;
+			sourceTree = "<group>";
+		};
+		3027A0562C27AE8C00CDA060 /* Events Details */ = {
+			isa = PBXGroup;
+			children = (
+				3027A0582C27AEAB00CDA060 /* Event Home Page.swift */,
+				3027A05A2C28B97400CDA060 /* Event Teams Page.swift */,
+			);
+			path = "Events Details";
+			sourceTree = "<group>";
+		};
+		3027A0572C27AE9700CDA060 /* Team Details */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Team Details";
+			sourceTree = "<group>";
+		};
+		3027A05C2C28BA6C00CDA060 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3027A0542C1E500800CDA060 /* Events Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		309E83F12C1CE1A7004CDECF = {
 			isa = PBXGroup;
 			children = (
-				309E83FC2C1CE1A7004CDECF /* ScoutVRC */,
 				309E83FB2C1CE1A7004CDECF /* Products */,
+				309E83FC2C1CE1A7004CDECF /* ScoutVRC */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,6 +329,17 @@
 		309E83FC2C1CE1A7004CDECF /* ScoutVRC */ = {
 			isa = PBXGroup;
 			children = (
+				3027A02C2C1DFDA300CDA060 /* Settings */,
+				3027A02B2C1DFD9D00CDA060 /* Manual */,
+				3027A02A2C1DFD9800CDA060 /* Chat */,
+				3027A0292C1DFD8B00CDA060 /* Scouting */,
+				3027A0282C1DFD8400CDA060 /* True Skill */,
+				3027A0272C1DFD7E00CDA060 /* World Skills */,
+				3027A0262C1DFD7800CDA060 /* Search */,
+				3027A0252C1DFD6F00CDA060 /* Favorites */,
+				3027A0192C1DF7C200CDA060 /* Home */,
+				3027A0152C1DF36D00CDA060 /* GoogleService-Info.plist */,
+				309E84192C1CE446004CDECF /* Auth */,
 				309E83FD2C1CE1A7004CDECF /* ScoutVRCApp.swift */,
 				309E83FF2C1CE1A7004CDECF /* ContentView.swift */,
 				309E84012C1CE1A9004CDECF /* Assets.xcassets */,
@@ -67,6 +355,33 @@
 				309E84052C1CE1A9004CDECF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		309E84192C1CE446004CDECF /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				309E841F2C1CE821004CDECF /* Backend */,
+				309E841C2C1CE750004CDECF /* Pages */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		309E841C2C1CE750004CDECF /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				309E841D2C1CE760004CDECF /* Login Page.swift */,
+				309E84222C1CE851004CDECF /* Auth Manager.swift */,
+				3027A0172C1DF41600CDA060 /* Register Page.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		309E841F2C1CE821004CDECF /* Backend */ = {
+			isa = PBXGroup;
+			children = (
+				309E84202C1CE82D004CDECF /* Toggle Pages.swift */,
+			);
+			path = Backend;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +400,12 @@
 			dependencies = (
 			);
 			name = ScoutVRC;
+			packageProductDependencies = (
+				309E84112C1CE395004CDECF /* FirebaseAuth */,
+				309E84132C1CE395004CDECF /* FirebaseFirestore */,
+				309E84152C1CE395004CDECF /* FirebaseFirestoreSwift */,
+				309E84172C1CE395004CDECF /* FirebaseStorage */,
+			);
 			productName = ScoutVRC;
 			productReference = 309E83FA2C1CE1A7004CDECF /* ScoutVRC.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +434,9 @@
 				Base,
 			);
 			mainGroup = 309E83F12C1CE1A7004CDECF;
+			packageReferences = (
+				309E84102C1CE2F5004CDECF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 309E83FB2C1CE1A7004CDECF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -128,6 +452,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				309E84062C1CE1A9004CDECF /* Preview Assets.xcassets in Resources */,
+				3027A0162C1DF36D00CDA060 /* GoogleService-Info.plist in Resources */,
 				309E84022C1CE1A9004CDECF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,7 +465,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				309E84002C1CE1A7004CDECF /* ContentView.swift in Sources */,
+				309E84232C1CE851004CDECF /* Auth Manager.swift in Sources */,
+				3027A05B2C28B97400CDA060 /* Event Teams Page.swift in Sources */,
+				3027A0532C1E4E8300CDA060 /* Search Request.swift in Sources */,
+				3027A0462C1DFEB100CDA060 /* Settings Page.swift in Sources */,
+				3027A0502C1E4D5700CDA060 /* Team Component.swift in Sources */,
 				309E83FE2C1CE1A7004CDECF /* ScoutVRCApp.swift in Sources */,
+				3027A02F2C1DFDB800CDA060 /* Favorites Page.swift in Sources */,
+				3027A03D2C1DFE6200CDA060 /* Scouting Page.swift in Sources */,
+				3027A04B2C1DFF9A00CDA060 /* World Skills Model.swift in Sources */,
+				3027A0242C1DFCB100CDA060 /* Side Menu Option Model.swift in Sources */,
+				309E841E2C1CE760004CDECF /* Login Page.swift in Sources */,
+				3027A0402C1DFE7600CDA060 /* Chat Page.swift in Sources */,
+				3027A01F2C1DFC8F00CDA060 /* Side Menu.swift in Sources */,
+				3027A0322C1DFDDC00CDA060 /* Search Page.swift in Sources */,
+				3027A0492C1DFF5200CDA060 /* RequestWorldSkills.swift in Sources */,
+				3027A04E2C1E4D3300CDA060 /* Event Component.swift in Sources */,
+				3027A0372C1DFE2800CDA060 /* World Skills Page.swift in Sources */,
+				3027A0432C1DFE9500CDA060 /* Manual Page.swift in Sources */,
+				3027A0212C1DFC9600CDA060 /* Side Menu Row.swift in Sources */,
+				3027A0552C1E500800CDA060 /* Events Model.swift in Sources */,
+				3027A03A2C1DFE3E00CDA060 /* True Skill Page.swift in Sources */,
+				3027A0592C27AEAB00CDA060 /* Event Home Page.swift in Sources */,
+				3027A01C2C1DF7D900CDA060 /* Home Page.swift in Sources */,
+				3027A0182C1DF41600CDA060 /* Register Page.swift in Sources */,
+				309E84212C1CE82D004CDECF /* Toggle Pages.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +623,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Scout VRC";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -312,6 +662,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Scout VRC";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -359,6 +710,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		309E84102C1CE2F5004CDECF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.27.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		309E84112C1CE395004CDECF /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 309E84102C1CE2F5004CDECF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		309E84132C1CE395004CDECF /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 309E84102C1CE2F5004CDECF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		309E84152C1CE395004CDECF /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 309E84102C1CE2F5004CDECF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		309E84172C1CE395004CDECF /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 309E84102C1CE2F5004CDECF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 309E83F22C1CE1A7004CDECF /* Project object */;
 }
