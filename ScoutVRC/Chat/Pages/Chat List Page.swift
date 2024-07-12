@@ -1,5 +1,5 @@
 //
-//  Manual Page.swift
+//  Chat Page.swift
 //  ScoutVRC
 //
 //  Created by Daksh Gupta on 6/15/24.
@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct Manual_Page: View {
+struct Chat_List_Page: View {
     var body: some View {
-        Text("Manual Page")
+        Text("Chat Page")
     }
 }
 
 #Preview {
-    Manual_Page()
+    Chat_Page()
 }
