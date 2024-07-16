@@ -12,7 +12,7 @@ class GetWorldSkillsRankings: ObservableObject {
     @Published var rankings: [SkillsRanking] = []
     
     func fetchHS() {
-        guard let url = URL(string: "https://www.robotevents.com/api/seasons/181/skills") else {
+        guard let url = URL(string: "https://www.robotevents.com/api/seasons/\(seasonID)/skills") else {
             print("Invalid URL")
             return
         }

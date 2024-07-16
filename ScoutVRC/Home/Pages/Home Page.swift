@@ -20,10 +20,9 @@ struct Home_Page: View {
                         Search_Page().tag(1)
                         World_Skills_Page().tag(2)
                         True_Skill_Page().tag(3)
-                        Scouting_Page().tag(4)
-                        Chat_Page().tag(5)
-                        Manual_Page().tag(6)
-                        Settings_Page().tag(7)
+                        Notes_List_Page().tag(4)
+                        Chat_List_Page().tag(5)
+                        Settings_Page().tag(6)
                     }
                     .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
                 }

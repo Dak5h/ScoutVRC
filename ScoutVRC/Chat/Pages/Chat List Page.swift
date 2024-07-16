@@ -14,5 +14,5 @@ struct Chat_List_Page: View {
 }
 
 #Preview {
-    Chat_Page()
+    Chat_List_Page()
 }

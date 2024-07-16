@@ -43,7 +43,7 @@ struct Login_Page: View {
                     // Page Name
                     Text("L O G I N")
                         .font(.system(size: 30))
-                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                        .fontWeight(.bold)
                     
                     // Spacing for UI
                     Spacer().frame(height: 5)
@@ -124,7 +124,7 @@ struct Login_Page: View {
                             togglePages.togglePage()
                         }) {
                             Text("Register Now!")
-                                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                                .fontWeight(.bold)
                                 .font(.system(size: 15))
                         }
                     }

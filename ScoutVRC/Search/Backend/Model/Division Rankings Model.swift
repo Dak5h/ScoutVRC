@@ -1,18 +1,31 @@
 //
-//  Division Rankings.swift
+//  Division Rankings Model.swift
 //  ScoutVRC
 //
 //  Created by Daksh Gupta on 7/10/24.
 //
 
-import SwiftUI
-
-struct Division_Rankings: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+struct EventRankingResponse: Decodable {
+    let data: [EventRanking]
 }
 
-#Preview {
-    Division_Rankings()
+struct EventRanking: Hashable, Decodable {
+    let id: Int
+    let rank: Int
+    let team: TeamRankDetails
+    let wins: Int
+    let losses: Int
+    let ties: Int
+    let wp: Int
+    let ap: Int
+    let sp: Int
+    let high_score: Int
+    let average_points: Double
+    let total_points: Int
+}
+
+struct TeamRankDetails: Hashable, Decodable {
+    let id: Int
+    let name: String
+    let code: String?
 }

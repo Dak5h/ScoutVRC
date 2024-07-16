@@ -27,7 +27,6 @@ struct Search_Page: View {
                 Team_Component()
             }
         }
-        .navigationTitle("Search Page")
     }
 }
 

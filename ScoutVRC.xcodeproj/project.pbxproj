@@ -17,9 +17,7 @@
 		3027A0322C1DFDDC00CDA060 /* Search Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027A0312C1DFDDC00CDA060 /* Search Page.swift */; };
 		3027A0372C1DFE2800CDA060 /* World Skills Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027A0362C1DFE2800CDA060 /* World Skills Page.swift */; };
 		3027A03A2C1DFE3E00CDA060 /* True Skill Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027A0392C1DFE3E00CDA060 /* True Skill Page.swift */; };
-		3027A03D2C1DFE6200CDA060 /* Scouting Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027A03C2C1DFE6200CDA060 /* Scouting Page.swift */; };
-		3027A0402C1DFE7600CDA060 /* Chat Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027A03F2C1DFE7600CDA060 /* Chat Page.swift */; };
-		3027A0432C1DFE9500CDA060 /* Manual Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027A0422C1DFE9500CDA060 /* Manual Page.swift */; };
+		3027A0402C1DFE7600CDA060 /* Chat List Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027A03F2C1DFE7600CDA060 /* Chat List Page.swift */; };
 		3027A0462C1DFEB100CDA060 /* Settings Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027A0452C1DFEB100CDA060 /* Settings Page.swift */; };
 		3027A0492C1DFF5200CDA060 /* RequestWorldSkills.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027A0482C1DFF5200CDA060 /* RequestWorldSkills.swift */; };
 		3027A04B2C1DFF9A00CDA060 /* World Skills Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027A04A2C1DFF9A00CDA060 /* World Skills Model.swift */; };
@@ -29,6 +27,8 @@
 		3027A0552C1E500800CDA060 /* Events Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027A0542C1E500800CDA060 /* Events Model.swift */; };
 		3027A0592C27AEAB00CDA060 /* Event Home Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027A0582C27AEAB00CDA060 /* Event Home Page.swift */; };
 		3027A05B2C28B97400CDA060 /* Event Teams Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027A05A2C28B97400CDA060 /* Event Teams Page.swift */; };
+		3027A05E2C28CEF600CDA060 /* Event Teams Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027A05D2C28CEF600CDA060 /* Event Teams Model.swift */; };
+		307480922C46F93300CF2EA5 /* Edit Note Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307480912C46F93300CF2EA5 /* Edit Note Page.swift */; };
 		309E83FE2C1CE1A7004CDECF /* ScoutVRCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309E83FD2C1CE1A7004CDECF /* ScoutVRCApp.swift */; };
 		309E84002C1CE1A7004CDECF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309E83FF2C1CE1A7004CDECF /* ContentView.swift */; };
 		309E84022C1CE1A9004CDECF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 309E84012C1CE1A9004CDECF /* Assets.xcassets */; };
@@ -40,6 +40,25 @@
 		309E841E2C1CE760004CDECF /* Login Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309E841D2C1CE760004CDECF /* Login Page.swift */; };
 		309E84212C1CE82D004CDECF /* Toggle Pages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309E84202C1CE82D004CDECF /* Toggle Pages.swift */; };
 		309E84232C1CE851004CDECF /* Auth Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309E84222C1CE851004CDECF /* Auth Manager.swift */; };
+		30A0C8892C34A52F00D491B2 /* Event Skills Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0C8882C34A52F00D491B2 /* Event Skills Page.swift */; };
+		30A0C88B2C35FC0500D491B2 /* Event Skills Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0C88A2C35FC0500D491B2 /* Event Skills Model.swift */; };
+		30F900F12C3C9286000FAA16 /* Event Awards Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F900F02C3C9286000FAA16 /* Event Awards Page.swift */; };
+		30F900F32C3C94B8000FAA16 /* Event Awards Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F900F22C3C94B8000FAA16 /* Event Awards Model.swift */; };
+		30F900F62C3F0595000FAA16 /* Division Tab View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F900F52C3F0595000FAA16 /* Division Tab View.swift */; };
+		30F900F82C3F0676000FAA16 /* Division Teams Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F900F72C3F0676000FAA16 /* Division Teams Page.swift */; };
+		30F900FA2C3F068B000FAA16 /* Division Rankings Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F900F92C3F068B000FAA16 /* Division Rankings Page.swift */; };
+		30F900FC2C3F06A0000FAA16 /* Division Matches Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F900FB2C3F06A0000FAA16 /* Division Matches Page.swift */; };
+		30F900FE2C3F0C3D000FAA16 /* Division Rankings Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F900FD2C3F0C3D000FAA16 /* Division Rankings Model.swift */; };
+		30F901002C405B7A000FAA16 /* Division Matches Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F900FF2C405B7A000FAA16 /* Division Matches Model.swift */; };
+		30F901032C40E36B000FAA16 /* TrueSkill Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F901022C40E36B000FAA16 /* TrueSkill Request.swift */; };
+		30F901062C40F2CC000FAA16 /* True Skill Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F901052C40F2CC000FAA16 /* True Skill Model.swift */; };
+		30F901082C433B11000FAA16 /* Team Matches Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F901072C433B11000FAA16 /* Team Matches Page.swift */; };
+		30F9010A2C443F0D000FAA16 /* Team Matches Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F901092C443F0D000FAA16 /* Team Matches Model.swift */; };
+		30F9010C2C447CC2000FAA16 /* Searched Teams Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9010B2C447CC2000FAA16 /* Searched Teams Model.swift */; };
+		30F9010E2C448E58000FAA16 /* Team Home Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9010D2C448E58000FAA16 /* Team Home Page.swift */; };
+		30F901102C44993E000FAA16 /* Team Events Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9010F2C44993E000FAA16 /* Team Events Model.swift */; };
+		30F901122C44A7F8000FAA16 /* Team Awards Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F901112C44A7F8000FAA16 /* Team Awards Page.swift */; };
+		30F901142C45989C000FAA16 /* Notes List Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F901132C45989C000FAA16 /* Notes List Page.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,9 +72,7 @@
 		3027A0312C1DFDDC00CDA060 /* Search Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Search Page.swift"; sourceTree = "<group>"; };
 		3027A0362C1DFE2800CDA060 /* World Skills Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "World Skills Page.swift"; sourceTree = "<group>"; };
 		3027A0392C1DFE3E00CDA060 /* True Skill Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "True Skill Page.swift"; sourceTree = "<group>"; };
-		3027A03C2C1DFE6200CDA060 /* Scouting Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scouting Page.swift"; sourceTree = "<group>"; };
-		3027A03F2C1DFE7600CDA060 /* Chat Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chat Page.swift"; sourceTree = "<group>"; };
-		3027A0422C1DFE9500CDA060 /* Manual Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Manual Page.swift"; sourceTree = "<group>"; };
+		3027A03F2C1DFE7600CDA060 /* Chat List Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chat List Page.swift"; sourceTree = "<group>"; };
 		3027A0452C1DFEB100CDA060 /* Settings Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Settings Page.swift"; sourceTree = "<group>"; };
 		3027A0482C1DFF5200CDA060 /* RequestWorldSkills.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestWorldSkills.swift; sourceTree = "<group>"; };
 		3027A04A2C1DFF9A00CDA060 /* World Skills Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "World Skills Model.swift"; sourceTree = "<group>"; };
@@ -65,6 +82,8 @@
 		3027A0542C1E500800CDA060 /* Events Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Events Model.swift"; sourceTree = "<group>"; };
 		3027A0582C27AEAB00CDA060 /* Event Home Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event Home Page.swift"; sourceTree = "<group>"; };
 		3027A05A2C28B97400CDA060 /* Event Teams Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event Teams Page.swift"; sourceTree = "<group>"; };
+		3027A05D2C28CEF600CDA060 /* Event Teams Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event Teams Model.swift"; sourceTree = "<group>"; };
+		307480912C46F93300CF2EA5 /* Edit Note Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Edit Note Page.swift"; sourceTree = "<group>"; };
 		309E83FA2C1CE1A7004CDECF /* ScoutVRC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScoutVRC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		309E83FD2C1CE1A7004CDECF /* ScoutVRCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoutVRCApp.swift; sourceTree = "<group>"; };
 		309E83FF2C1CE1A7004CDECF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -74,6 +93,25 @@
 		309E841D2C1CE760004CDECF /* Login Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login Page.swift"; sourceTree = "<group>"; };
 		309E84202C1CE82D004CDECF /* Toggle Pages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Toggle Pages.swift"; sourceTree = "<group>"; };
 		309E84222C1CE851004CDECF /* Auth Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Auth Manager.swift"; sourceTree = "<group>"; };
+		30A0C8882C34A52F00D491B2 /* Event Skills Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event Skills Page.swift"; sourceTree = "<group>"; };
+		30A0C88A2C35FC0500D491B2 /* Event Skills Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event Skills Model.swift"; sourceTree = "<group>"; };
+		30F900F02C3C9286000FAA16 /* Event Awards Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event Awards Page.swift"; sourceTree = "<group>"; };
+		30F900F22C3C94B8000FAA16 /* Event Awards Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event Awards Model.swift"; sourceTree = "<group>"; };
+		30F900F52C3F0595000FAA16 /* Division Tab View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Division Tab View.swift"; sourceTree = "<group>"; };
+		30F900F72C3F0676000FAA16 /* Division Teams Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Division Teams Page.swift"; sourceTree = "<group>"; };
+		30F900F92C3F068B000FAA16 /* Division Rankings Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Division Rankings Page.swift"; sourceTree = "<group>"; };
+		30F900FB2C3F06A0000FAA16 /* Division Matches Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Division Matches Page.swift"; sourceTree = "<group>"; };
+		30F900FD2C3F0C3D000FAA16 /* Division Rankings Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Division Rankings Model.swift"; sourceTree = "<group>"; };
+		30F900FF2C405B7A000FAA16 /* Division Matches Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Division Matches Model.swift"; sourceTree = "<group>"; };
+		30F901022C40E36B000FAA16 /* TrueSkill Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrueSkill Request.swift"; sourceTree = "<group>"; };
+		30F901052C40F2CC000FAA16 /* True Skill Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "True Skill Model.swift"; sourceTree = "<group>"; };
+		30F901072C433B11000FAA16 /* Team Matches Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Team Matches Page.swift"; sourceTree = "<group>"; };
+		30F901092C443F0D000FAA16 /* Team Matches Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Team Matches Model.swift"; sourceTree = "<group>"; };
+		30F9010B2C447CC2000FAA16 /* Searched Teams Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Searched Teams Model.swift"; sourceTree = "<group>"; };
+		30F9010D2C448E58000FAA16 /* Team Home Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Team Home Page.swift"; sourceTree = "<group>"; };
+		30F9010F2C44993E000FAA16 /* Team Events Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Team Events Model.swift"; sourceTree = "<group>"; };
+		30F901112C44A7F8000FAA16 /* Team Awards Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Team Awards Page.swift"; sourceTree = "<group>"; };
+		30F901132C45989C000FAA16 /* Notes List Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notes List Page.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +167,7 @@
 		3027A0252C1DFD6F00CDA060 /* Favorites */ = {
 			isa = PBXGroup;
 			children = (
+				3090412F2C3359B3002CAD79 /* Components */,
 				3027A02D2C1DFDAB00CDA060 /* Pages */,
 			);
 			path = Favorites;
@@ -156,6 +195,7 @@
 		3027A0282C1DFD8400CDA060 /* True Skill */ = {
 			isa = PBXGroup;
 			children = (
+				30F901012C40E354000FAA16 /* Backend */,
 				3027A0382C1DFE3600CDA060 /* Pages */,
 			);
 			path = "True Skill";
@@ -175,14 +215,6 @@
 				3027A03E2C1DFE6E00CDA060 /* Pages */,
 			);
 			path = Chat;
-			sourceTree = "<group>";
-		};
-		3027A02B2C1DFD9D00CDA060 /* Manual */ = {
-			isa = PBXGroup;
-			children = (
-				3027A0412C1DFE8700CDA060 /* Pages */,
-			);
-			path = Manual;
 			sourceTree = "<group>";
 		};
 		3027A02C2C1DFDA300CDA060 /* Settings */ = {
@@ -228,7 +260,8 @@
 		3027A03B2C1DFE5200CDA060 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
-				3027A03C2C1DFE6200CDA060 /* Scouting Page.swift */,
+				30F901132C45989C000FAA16 /* Notes List Page.swift */,
+				307480912C46F93300CF2EA5 /* Edit Note Page.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -236,15 +269,7 @@
 		3027A03E2C1DFE6E00CDA060 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
-				3027A03F2C1DFE7600CDA060 /* Chat Page.swift */,
-			);
-			path = Pages;
-			sourceTree = "<group>";
-		};
-		3027A0412C1DFE8700CDA060 /* Pages */ = {
-			isa = PBXGroup;
-			children = (
-				3027A0422C1DFE9500CDA060 /* Manual Page.swift */,
+				3027A03F2C1DFE7600CDA060 /* Chat List Page.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -289,8 +314,11 @@
 		3027A0562C27AE8C00CDA060 /* Events Details */ = {
 			isa = PBXGroup;
 			children = (
+				30F900F42C3F057B000FAA16 /* Division */,
 				3027A0582C27AEAB00CDA060 /* Event Home Page.swift */,
 				3027A05A2C28B97400CDA060 /* Event Teams Page.swift */,
+				30A0C8882C34A52F00D491B2 /* Event Skills Page.swift */,
+				30F900F02C3C9286000FAA16 /* Event Awards Page.swift */,
 			);
 			path = "Events Details";
 			sourceTree = "<group>";
@@ -298,6 +326,9 @@
 		3027A0572C27AE9700CDA060 /* Team Details */ = {
 			isa = PBXGroup;
 			children = (
+				30F901072C433B11000FAA16 /* Team Matches Page.swift */,
+				30F9010D2C448E58000FAA16 /* Team Home Page.swift */,
+				30F901112C44A7F8000FAA16 /* Team Awards Page.swift */,
 			);
 			path = "Team Details";
 			sourceTree = "<group>";
@@ -306,8 +337,23 @@
 			isa = PBXGroup;
 			children = (
 				3027A0542C1E500800CDA060 /* Events Model.swift */,
+				3027A05D2C28CEF600CDA060 /* Event Teams Model.swift */,
+				30A0C88A2C35FC0500D491B2 /* Event Skills Model.swift */,
+				30F900F22C3C94B8000FAA16 /* Event Awards Model.swift */,
+				30F900FD2C3F0C3D000FAA16 /* Division Rankings Model.swift */,
+				30F900FF2C405B7A000FAA16 /* Division Matches Model.swift */,
+				30F901092C443F0D000FAA16 /* Team Matches Model.swift */,
+				30F9010B2C447CC2000FAA16 /* Searched Teams Model.swift */,
+				30F9010F2C44993E000FAA16 /* Team Events Model.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		3090412F2C3359B3002CAD79 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		309E83F12C1CE1A7004CDECF = {
@@ -330,7 +376,6 @@
 			isa = PBXGroup;
 			children = (
 				3027A02C2C1DFDA300CDA060 /* Settings */,
-				3027A02B2C1DFD9D00CDA060 /* Manual */,
 				3027A02A2C1DFD9800CDA060 /* Chat */,
 				3027A0292C1DFD8B00CDA060 /* Scouting */,
 				3027A0282C1DFD8400CDA060 /* True Skill */,
@@ -382,6 +427,34 @@
 				309E84202C1CE82D004CDECF /* Toggle Pages.swift */,
 			);
 			path = Backend;
+			sourceTree = "<group>";
+		};
+		30F900F42C3F057B000FAA16 /* Division */ = {
+			isa = PBXGroup;
+			children = (
+				30F900F52C3F0595000FAA16 /* Division Tab View.swift */,
+				30F900F72C3F0676000FAA16 /* Division Teams Page.swift */,
+				30F900F92C3F068B000FAA16 /* Division Rankings Page.swift */,
+				30F900FB2C3F06A0000FAA16 /* Division Matches Page.swift */,
+			);
+			path = Division;
+			sourceTree = "<group>";
+		};
+		30F901012C40E354000FAA16 /* Backend */ = {
+			isa = PBXGroup;
+			children = (
+				30F901042C40F2C2000FAA16 /* Model */,
+				30F901022C40E36B000FAA16 /* TrueSkill Request.swift */,
+			);
+			path = Backend;
+			sourceTree = "<group>";
+		};
+		30F901042C40F2C2000FAA16 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				30F901052C40F2CC000FAA16 /* True Skill Model.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -468,28 +541,47 @@
 				309E84232C1CE851004CDECF /* Auth Manager.swift in Sources */,
 				3027A05B2C28B97400CDA060 /* Event Teams Page.swift in Sources */,
 				3027A0532C1E4E8300CDA060 /* Search Request.swift in Sources */,
+				307480922C46F93300CF2EA5 /* Edit Note Page.swift in Sources */,
 				3027A0462C1DFEB100CDA060 /* Settings Page.swift in Sources */,
 				3027A0502C1E4D5700CDA060 /* Team Component.swift in Sources */,
+				30F900FA2C3F068B000FAA16 /* Division Rankings Page.swift in Sources */,
 				309E83FE2C1CE1A7004CDECF /* ScoutVRCApp.swift in Sources */,
 				3027A02F2C1DFDB800CDA060 /* Favorites Page.swift in Sources */,
-				3027A03D2C1DFE6200CDA060 /* Scouting Page.swift in Sources */,
+				30F900F62C3F0595000FAA16 /* Division Tab View.swift in Sources */,
 				3027A04B2C1DFF9A00CDA060 /* World Skills Model.swift in Sources */,
+				30F900FE2C3F0C3D000FAA16 /* Division Rankings Model.swift in Sources */,
 				3027A0242C1DFCB100CDA060 /* Side Menu Option Model.swift in Sources */,
 				309E841E2C1CE760004CDECF /* Login Page.swift in Sources */,
-				3027A0402C1DFE7600CDA060 /* Chat Page.swift in Sources */,
+				3027A0402C1DFE7600CDA060 /* Chat List Page.swift in Sources */,
+				30A0C88B2C35FC0500D491B2 /* Event Skills Model.swift in Sources */,
+				30F900F32C3C94B8000FAA16 /* Event Awards Model.swift in Sources */,
+				30F900F82C3F0676000FAA16 /* Division Teams Page.swift in Sources */,
 				3027A01F2C1DFC8F00CDA060 /* Side Menu.swift in Sources */,
 				3027A0322C1DFDDC00CDA060 /* Search Page.swift in Sources */,
+				30A0C8892C34A52F00D491B2 /* Event Skills Page.swift in Sources */,
 				3027A0492C1DFF5200CDA060 /* RequestWorldSkills.swift in Sources */,
 				3027A04E2C1E4D3300CDA060 /* Event Component.swift in Sources */,
+				30F9010E2C448E58000FAA16 /* Team Home Page.swift in Sources */,
+				30F9010A2C443F0D000FAA16 /* Team Matches Model.swift in Sources */,
+				30F901032C40E36B000FAA16 /* TrueSkill Request.swift in Sources */,
 				3027A0372C1DFE2800CDA060 /* World Skills Page.swift in Sources */,
-				3027A0432C1DFE9500CDA060 /* Manual Page.swift in Sources */,
+				30F901002C405B7A000FAA16 /* Division Matches Model.swift in Sources */,
 				3027A0212C1DFC9600CDA060 /* Side Menu Row.swift in Sources */,
+				30F901062C40F2CC000FAA16 /* True Skill Model.swift in Sources */,
 				3027A0552C1E500800CDA060 /* Events Model.swift in Sources */,
+				30F901142C45989C000FAA16 /* Notes List Page.swift in Sources */,
+				30F9010C2C447CC2000FAA16 /* Searched Teams Model.swift in Sources */,
 				3027A03A2C1DFE3E00CDA060 /* True Skill Page.swift in Sources */,
 				3027A0592C27AEAB00CDA060 /* Event Home Page.swift in Sources */,
+				30F901122C44A7F8000FAA16 /* Team Awards Page.swift in Sources */,
 				3027A01C2C1DF7D900CDA060 /* Home Page.swift in Sources */,
 				3027A0182C1DF41600CDA060 /* Register Page.swift in Sources */,
+				30F900FC2C3F06A0000FAA16 /* Division Matches Page.swift in Sources */,
 				309E84212C1CE82D004CDECF /* Toggle Pages.swift in Sources */,
+				30F901082C433B11000FAA16 /* Team Matches Page.swift in Sources */,
+				30F901102C44993E000FAA16 /* Team Events Model.swift in Sources */,
+				3027A05E2C28CEF600CDA060 /* Event Teams Model.swift in Sources */,
+				30F900F12C3C9286000FAA16 /* Event Awards Page.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,6 +716,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Scout VRC";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -632,20 +725,21 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = daksh.ScoutVRC;
+				PRODUCT_BUNDLE_IDENTIFIER = com.daksh.scoutvrc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -663,6 +757,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Scout VRC";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -671,20 +766,21 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = daksh.ScoutVRC;
+				PRODUCT_BUNDLE_IDENTIFIER = com.daksh.scoutvrc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -1,25 +1,21 @@
 //
-//  Event_Home_Page.swift
+//  Team Home Page.swift
 //  ScoutVRC
 //
-//  Created by Daksh Gupta on 6/22/24.
+//  Created by Daksh Gupta on 7/14/24.
 //
 
 import SwiftUI
-import Firebase
+import FirebaseAuth
 import FirebaseFirestore
 
-struct Event_Home_Page: View {
-    var eventID: Int
-    var eventName: String
-    var eventStart: String
-    var eventEnd: String
-    var eventSKU: String
-    var eventAddress: String
-    var eventDivisions: [Division]
+struct Team_Home_Page: View {
+    var teamID: Int
+    var teamNumber: String
+    var teamName: String
     
     @State private var isFavorited = false
-    @StateObject var eventSearch = Search_Request()
+    @StateObject var teamEventsModel = Search_Request()
     
     var body: some View {
         VStack {
@@ -30,7 +26,7 @@ struct Event_Home_Page: View {
                     .frame(height: 225)
                 
                 VStack {
-                    Text(eventName)
+                    Text(teamNumber)
                         .font(.system(size: 20))
                         .fontWeight(.bold)
                         .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
@@ -38,7 +34,7 @@ struct Event_Home_Page: View {
                     
                     Spacer().frame(height: 5)
                     
-                    Text("\(formatDate(eventStart)) - \(formatDate(eventEnd))")
+                    Text(teamName)
                         .font(.system(size: 16))
                         .fontWeight(.bold)
                         .foregroundStyle(.primary.opacity(0.5))
@@ -47,18 +43,17 @@ struct Event_Home_Page: View {
                     
                     Spacer().frame(height: 35)
                     
-                    HStack {
+                    HStack(alignment: .top) {
                         Group {
                             VStack {
-                                // Number of Teams
-                                Text(String(eventSearch.eventTeams.count))
+                                Text(String(teamEventsModel.teamEvents.count))
                                     .font(.system(size: 18))
                                     .fontWeight(.bold)
                                     .foregroundStyle(.primary.opacity(0.75))
                                     .lineLimit(1)
                                     .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
                                 
-                                Text("Teams")
+                                Text("Events")
                                     .font(.system(size: 14))
                                     .fontWeight(.bold)
                                     .foregroundStyle(.primary.opacity(0.5))
@@ -67,15 +62,14 @@ struct Event_Home_Page: View {
                             }
                             
                             VStack {
-                                // Number of Divisions
-                                Text(String(eventDivisions.count))
+                                Text(String(teamEventsModel.teamAwards.count))
                                     .font(.system(size: 18))
                                     .fontWeight(.bold)
                                     .foregroundStyle(.primary.opacity(0.75))
                                     .lineLimit(1)
                                     .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
                                 
-                                Text("Divisions")
+                                Text("Awards")
                                     .font(.system(size: 14))
                                     .fontWeight(.bold)
                                     .foregroundStyle(.primary.opacity(0.5))
@@ -88,20 +82,8 @@ struct Event_Home_Page: View {
                         
                         Group {
                             // Link to robotevents button
-                            Link(destination: URL(string: "https://www.robotevents.com/robot-competitions/vex-robotics-competition/\(eventSKU).html")!) {
+                            Link(destination: URL(string: "https://www.robotevents.com/teams/V5RC/\(teamNumber)")!) {
                                 Image(systemName: "link")
-                                    .frame(maxWidth: .leastNormalMagnitude + 25, maxHeight: .leastNormalMagnitude + 10)
-                                    .padding()
-                                    .background(Color(#colorLiteral(red: 0.8570463061, green: 0.8669943213, blue: 0.8452582955, alpha: 1)))
-                                    .foregroundColor(.black)
-                                    .cornerRadius(10)
-                                    .fontWeight(.bold)
-                            }
-                            
-                            // Link to maps button
-                            Link(destination: URL(string: "http://maps.apple.com/?address=\(eventAddress)")!)
-                            {
-                                Image(systemName: "location.fill")
                                     .frame(maxWidth: .leastNormalMagnitude + 25, maxHeight: .leastNormalMagnitude + 10)
                                     .padding()
                                     .background(Color(#colorLiteral(red: 0.8570463061, green: 0.8669943213, blue: 0.8452582955, alpha: 1)))
@@ -116,27 +98,38 @@ struct Event_Home_Page: View {
             
             List {
                 Section("Information") {
-                    NavigationLink(destination: Event_Teams_Page(eventID: eventID)) {
-                        Text("Teams")
-                    }
-                    
-                    NavigationLink(destination: Event_Skills_Page(eventID: eventID)) {
-                        Text("Skills Rankings")
-                    }
-                    
-                    NavigationLink(destination: Event_Awards_Page(eventID: eventID)) {
-                        Text("Awards")
-                    }
+                    NavigationLink(destination: Team_Awards_Page(teamID: teamID)) {
+                            Text("Awards")
+                        }
                 }
                 
-                Section("Divisions") {
-                    ForEach(eventDivisions, id: \.id) { division in
-                        NavigationLink(destination: Division_Tab_View(eventID: eventID, divID: division.id)) {
-                            Text(division.name)
+                Section("Events") {
+                    ForEach(teamEventsModel.teamEvents, id: \.id) { event in
+                        NavigationLink(destination: Event_Home_Page(eventID: event.id, eventName: event.name, eventStart: event.start, eventEnd: event.end, eventSKU: event.sku, eventAddress: "\(String(describing: event.location.address_1)),\(event.location.city),\(event.location.postcode)", eventDivisions: event.divisions)) {
+                            VStack(alignment: .leading) {
+                                Text(event.name)
+                                    .fontWeight(.bold)
+                                    .foregroundStyle(.primary)
+                                    .lineLimit(1)
+
+                                Spacer().frame(height: 2)
+
+                                Text("\(formatDate(event.start)) - \(formatDate(event.end))")
+                                    .fontWeight(.semibold)
+                                    .foregroundStyle(.primary.opacity(0.5))
+                                    .lineLimit(1)
+                            }
+                            .padding()
+                            .listRowBackground(Color.primary.opacity(0.1))
                         }
                     }
                 }
             }
+        }
+        .onAppear {
+            checkIfFavorited()
+            teamEventsModel.getTeamEvents(teamID: teamID)
+            teamEventsModel.getTeamAwards(teamID: teamID)
         }
         .toolbar(.visible, for: .navigationBar)
         .navigationTitle("S C O U T   V R C")
@@ -152,9 +145,62 @@ struct Event_Home_Page: View {
                 })
             }
         }
-        .onAppear {
-            checkIfFavorited()
-            eventSearch.getEventTeams(eventID: eventID)
+    }
+    
+    // Function to add event to favorites
+    func addFavoriteTeam(fTeamID: Int) {
+        guard let userID = Auth.auth().currentUser?.uid else { return }
+        let db = Firestore.firestore()
+        
+        db.collection("users").document(userID).collection("favorites").document(String(fTeamID)).setData([
+            "teamID": teamID,
+            "teamNumber": teamNumber,
+            "teamName": teamName
+        ]) { error in
+            if error != nil {
+                print("Error adding favorite event: \(error!.localizedDescription)")
+            } else {
+                isFavorited = true
+            }
+        }
+    }
+    
+    
+    // Function to remove event from favorites
+    func removeFavoriteTeam(fTeamID: Int) {
+        guard let userID = Auth.auth().currentUser?.uid else { return }
+        let db = Firestore.firestore()
+        
+        db.collection("users").document(userID).collection("favorites").document(String(fTeamID)).delete { error in
+            if let error = error {
+                print("Error removing favorite event: \(error.localizedDescription)")
+            } else {
+                print("Event successfully removed from favorites!")
+                isFavorited = false
+            }
+        }
+    }
+    
+    // Function to toggle favorite status
+    func toggleFavoriteStatus() {
+        if isFavorited {
+            removeFavoriteTeam(fTeamID: teamID)
+        } else {
+            addFavoriteTeam(fTeamID: teamID)
+        }
+    }
+    
+    // Function to check if event is already favorited
+    func checkIfFavorited() {
+        guard let userID = Auth.auth().currentUser?.uid else { return }
+        let db = Firestore.firestore()
+        
+        db.collection("users").document(userID).collection("favorites").document(String(teamID)).getDocument { (document, error) in
+            if let document = document, document.exists {
+                isFavorited = true
+            } else {
+                isFavorited = false
+            }
         }
     }
     
@@ -168,74 +214,8 @@ struct Event_Home_Page: View {
         
         return outputFormatter.string(from: date)
     }
-    
-    // Function to add event to favorites
-    func addFavoriteEvent(fEventID: Int) {
-        guard let userID = Auth.auth().currentUser?.uid else { return }
-        let db = Firestore.firestore()
-        
-        // Convert divisions to an array of dictionaries
-        let divisionsData = eventDivisions.map { division in
-            [
-                "id": division.id,
-                "name": division.name,
-                "order": division.order
-            ]
-        }
-        
-        db.collection("users").document(userID).collection("favorites").document(String(fEventID)).setData([
-            "eventID": eventID,
-            "name": eventName,
-            "start": eventStart,
-            "end": eventEnd,
-            "eventAddress": eventAddress,
-            "eventSKU": eventSKU,
-            "eventDivisions": divisionsData
-        ]) { error in
-            if error != nil {
-                print("Error adding favorite event: \(error!.localizedDescription)")
-            } else {
-                isFavorited = true
-            }
-        }
-    }
-    
-    
-    // Function to remove event from favorites
-    func removeFavoriteEvent(fEventID: Int) {
-        guard let userID = Auth.auth().currentUser?.uid else { return }
-        let db = Firestore.firestore()
-        
-        db.collection("users").document(userID).collection("favorites").document(String(fEventID)).delete { error in
-            if let error = error {
-                print("Error removing favorite event: \(error.localizedDescription)")
-            } else {
-                print("Event successfully removed from favorites!")
-                isFavorited = false
-            }
-        }
-    }
-    
-    // Function to toggle favorite status
-    func toggleFavoriteStatus() {
-        if isFavorited {
-            removeFavoriteEvent(fEventID: eventID)
-        } else {
-            addFavoriteEvent(fEventID: eventID)
-        }
-    }
-    
-    // Function to check if event is already favorited
-    func checkIfFavorited() {
-        guard let userID = Auth.auth().currentUser?.uid else { return }
-        let db = Firestore.firestore()
-        
-        db.collection("users").document(userID).collection("favorites").document(String(eventID)).getDocument { (document, error) in
-            if let document = document, document.exists {
-                isFavorited = true
-            } else {
-                isFavorited = false
-            }
-        }
-    }
+}
+
+#Preview {
+    Team_Home_Page(teamID: 102409, teamNumber: "295S", teamName: "[PART] S")
 }

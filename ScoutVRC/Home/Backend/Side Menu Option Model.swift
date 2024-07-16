@@ -14,7 +14,6 @@ enum SideMenuOptionModel: Int, CaseIterable {
     case true_skill
     case scout
     case chat
-    case manual
     case settings
     
     var optionTitle: String {
@@ -31,8 +30,6 @@ enum SideMenuOptionModel: Int, CaseIterable {
             return "Scouting"
         case .chat:
             return "Chat"
-        case .manual:
-            return "Game Manual"
         case .settings:
             return "Settings"
         }
@@ -52,8 +49,6 @@ enum SideMenuOptionModel: Int, CaseIterable {
             return "list.bullet.clipboard.fill"
         case .chat:
             return "bubble.fill"
-        case .manual:
-            return "text.book.closed.fill"
         case .settings:
             return "gearshape.fill"
         }

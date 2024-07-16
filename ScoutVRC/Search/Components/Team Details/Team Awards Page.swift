@@ -1,21 +1,22 @@
 //
-//  Event Awards Page.swift
+//  Team Awards Page.swift
 //  ScoutVRC
 //
-//  Created by Daksh Gupta on 7/8/24.
+//  Created by Daksh Gupta on 7/14/24.
 //
+
 import SwiftUI
 
-struct Event_Awards_Page: View {
-    var eventID: Int
+struct Team_Awards_Page: View {
+    var teamID: Int
     
-    @StateObject var eventAwardsModel = Search_Request()
+    @StateObject var teamAwardsModel = Search_Request()
     
     var body: some View {
         NavigationStack {
             VStack {
                 List {
-                    ForEach(eventAwardsModel.eventAwards, id: \.self) { award in
+                    ForEach(teamAwardsModel.teamAwards, id: \.self) { award in
                         VStack(alignment: .leading) {
                             Text(extractTitleName(award.title))
                                 .fontWeight(.bold)
@@ -24,22 +25,20 @@ struct Event_Awards_Page: View {
                             
                             Spacer().frame(height: 2)
                             
-                            ForEach(award.teamWinners, id: \.self) { winner in
-                                VStack(alignment: .leading) {
-                                    Text(winner.team.name)
-                                        .fontWeight(.semibold)
-                                        .foregroundStyle(.primary.opacity(0.5))
-                                        .lineLimit(1)
-                                }
-                                .padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
-                                .listRowBackground(Color.primary.opacity(0.1))
+                            VStack(alignment: .leading) {
+                                Text(award.event.name)
+                                    .fontWeight(.semibold)
+                                    .foregroundStyle(.primary.opacity(0.5))
+                                    .lineLimit(1)
                             }
+                            .padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
+                            .listRowBackground(Color.primary.opacity(0.1))
                         }
                     }
                     .padding()
                 }
                 .onAppear {
-                    eventAwardsModel.getEventAwards(eventID: eventID)
+                    teamAwardsModel.getTeamAwards(teamID: teamID)
                 }
             }
         }
@@ -55,5 +54,5 @@ struct Event_Awards_Page: View {
 }
 
 #Preview {
-    Event_Awards_Page(eventID: 51524)
+    Team_Awards_Page(teamID: 102409)
 }

@@ -38,11 +38,15 @@ struct Register_Page: View {
                     let user: [String: Any] = [
                         "email": email,
                         "username": username,
-                        "team number": team
+                        "team number": team,
+                        "match notifications": false,
+                        "message notifications": false
                     ]
                     
+                    guard let userID = Auth.auth().currentUser?.uid else { return }
+                    
                     // Add a new document with a generated ID to the "users" collection
-                    Firestore.firestore().collection("users").addDocument(data: user)
+                    Firestore.firestore().collection("users").document(userID).setData(user)
                 }
             }
         } else {
