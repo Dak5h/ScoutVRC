@@ -19,7 +19,6 @@ struct FavoriteEvent: Identifiable, Codable {
     var end: String
     var eventAddress: String
     var eventSKU: String
-    var eventDivisions: [Division]
 }
 
 struct FavoriteTeam: Identifiable, Codable {
@@ -88,7 +87,7 @@ struct Favorites_Page: View {
             List {
                 Section(header: Text("Favorite Events")) {
                     ForEach(viewModel.favoriteEvents) { event in
-                        NavigationLink(destination: Event_Home_Page(eventID: event.eventID, eventName: event.name, eventStart: event.start, eventEnd: event.end, eventSKU: event.eventSKU, eventAddress: event.eventAddress, eventDivisions: event.eventDivisions)) {
+                        NavigationLink(destination: Event_Home_Page(eventID: event.eventID, eventName: event.name, eventStart: event.start, eventEnd: event.end, eventSKU: event.eventSKU, eventAddress: event.eventAddress)) {
                             VStack(alignment: .leading) {
                                 Text(event.name)
                                     .fontWeight(.bold)

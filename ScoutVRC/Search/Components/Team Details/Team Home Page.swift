@@ -105,7 +105,7 @@ struct Team_Home_Page: View {
                 
                 Section("Events") {
                     ForEach(teamEventsModel.teamEvents, id: \.id) { event in
-                        NavigationLink(destination: Event_Home_Page(eventID: event.id, eventName: event.name, eventStart: event.start, eventEnd: event.end, eventSKU: event.sku, eventAddress: "\(String(describing: event.location.address_1)),\(event.location.city),\(event.location.postcode)", eventDivisions: event.divisions)) {
+                        NavigationLink(destination: Event_Home_Page(eventID: event.id, eventName: event.name, eventStart: event.start, eventEnd: event.end, eventSKU: event.sku, eventAddress: "\(String(describing: event.location.address_1)),\(event.location.city),\(event.location.postcode)")) {
                             VStack(alignment: .leading) {
                                 Text(event.name)
                                     .fontWeight(.bold)

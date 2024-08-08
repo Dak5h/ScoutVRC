@@ -16,7 +16,6 @@ struct Event_Home_Page: View {
     var eventEnd: String
     var eventSKU: String
     var eventAddress: String
-    var eventDivisions: [Division]
     
     @State private var isFavorited = false
     @StateObject var eventSearch = Search_Request()
@@ -65,10 +64,10 @@ struct Event_Home_Page: View {
                                     .lineLimit(1)
                                     .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
                             }
-                            
+
                             VStack {
                                 // Number of Divisions
-                                Text(String(eventDivisions.count))
+                                Text(String(eventSearch.eventDetails.first?.divisions.count ?? 0))
                                     .font(.system(size: 18))
                                     .fontWeight(.bold)
                                     .foregroundStyle(.primary.opacity(0.75))
@@ -130,11 +129,12 @@ struct Event_Home_Page: View {
                 }
                 
                 Section("Divisions") {
-                    ForEach(eventDivisions, id: \.id) { division in
+                    ForEach(eventSearch.eventDetails.first?.divisions ?? [], id: \.id) { division in
                         NavigationLink(destination: Division_Tab_View(eventID: eventID, divID: division.id)) {
                             Text(division.name)
                         }
                     }
+
                 }
             }
         }
@@ -155,6 +155,7 @@ struct Event_Home_Page: View {
         .onAppear {
             checkIfFavorited()
             eventSearch.getEventTeams(eventID: eventID)
+            eventSearch.getEventDetails(eventID: eventID)
         }
     }
     
@@ -174,14 +175,6 @@ struct Event_Home_Page: View {
         guard let userID = Auth.auth().currentUser?.uid else { return }
         let db = Firestore.firestore()
         
-        // Convert divisions to an array of dictionaries
-        let divisionsData = eventDivisions.map { division in
-            [
-                "id": division.id,
-                "name": division.name,
-                "order": division.order
-            ]
-        }
         
         db.collection("users").document(userID).collection("favorites").document(String(fEventID)).setData([
             "eventID": eventID,
@@ -190,7 +183,6 @@ struct Event_Home_Page: View {
             "end": eventEnd,
             "eventAddress": eventAddress,
             "eventSKU": eventSKU,
-            "eventDivisions": divisionsData
         ]) { error in
             if error != nil {
                 print("Error adding favorite event: \(error!.localizedDescription)")

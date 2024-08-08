@@ -8,10 +8,12 @@
 import Foundation
 import Combine
 
-var seasonID: Int = 181
+var seasonID: Int = 190
 
 class Search_Request: ObservableObject {
     @Published var events: [Event] = []
+    @Published var eventDetails: [Event] = []
+    @Published var searchedEvents: [SearchedEvent] = []
     @Published var eventTeams: [EventTeam] = []
     @Published var eventSkills: [EventSkills] = []
     @Published var eventAwards: [EventAward] = []
@@ -32,20 +34,20 @@ class Search_Request: ObservableObject {
         // Get current date and one week later
         let currentDate = Date()
         let oneWeekLater = Calendar.current.date(byAdding: .day, value: 14, to: currentDate)!
-
+        
         // Format dates as required by the API
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
         
         let start = dateFormatter.string(from: currentDate)
         let end = dateFormatter.string(from: oneWeekLater)
-
+        
         // Create URL with dynamic dates
         guard let url = URL(string: "https://www.robotevents.com/api/v2/events?season[]=\(seasonID)&start=\(start)&end=\(end)&myEvents=false&per_page=250") else {
             print("Invalid URL")
             return
         }
-
+        
         var request = URLRequest(url: url)
         request.setValue("Bearer \(bearerToken)", forHTTPHeaderField: "Authorization")
         
@@ -78,7 +80,46 @@ class Search_Request: ObservableObject {
         
         task.resume()
     }
-
+    
+    func getSearchedEvents(searchQuery: String) {
+        searchedTeams.removeAll()
+        
+        guard let url = URL(string: "https://v2.api.vrctracker.blakehaug.com/events?search=\(searchQuery)") else {
+            print("Invalid URL")
+            return
+        }
+        
+        let task = URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
+            if let error = error {
+                print("Network error: \(error.localizedDescription)")
+                return
+            }
+            
+            guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+                print("HTTP error: \(response.debugDescription)")
+                return
+            }
+            
+            guard let data = data else {
+                print("No data received")
+                return
+            }
+            
+            do {
+                let searchedTeamsResponse = try JSONDecoder().decode([SearchedEvent].self, from: data)
+                
+                DispatchQueue.main.async {
+                    self?.searchedEvents = searchedTeamsResponse
+                }
+            } catch let decodingError {
+                print("Decoding error: \(decodingError.localizedDescription)")
+            }
+        }
+        
+        task.resume()
+    }
+    
+    
     
     func getEventTeams(eventID: Int) {
         eventTeams.removeAll()
@@ -353,7 +394,7 @@ class Search_Request: ObservableObject {
     func getTeams(searchQuery: String) {
         searchedTeams.removeAll()
         
-        guard let url = URL(string: "https://api.vrctracker.blakehaug.com/teams?search=\(searchQuery)") else {
+        guard let url = URL(string: "https://v2.api.vrctracker.blakehaug.com/teams?search=\(searchQuery)") else {
             print("Invalid URL")
             return
         }
@@ -461,6 +502,47 @@ class Search_Request: ObservableObject {
                 
                 DispatchQueue.main.async {
                     self?.teamAwards = teamAwardsResponse.data
+                }
+            } catch let decodingError {
+                print("Decoding error: \(decodingError.localizedDescription)")
+            }
+        }
+        
+        task.resume()
+    }
+    
+    func getEventDetails(eventID: Int) {
+        eventDetails.removeAll()
+        
+        guard let url = URL(string: "https://www.robotevents.com/api/v2/events?id=\(eventID)&myEvents=false") else {
+            print("Invalid URL")
+            return
+        }
+        
+        var request = URLRequest(url: url)
+        request.setValue("Bearer \(bearerToken)", forHTTPHeaderField: "Authorization")
+        
+        let task = URLSession.shared.dataTask(with: request) { [weak self] data, response, error in
+            if let error = error {
+                print("Network error: \(error.localizedDescription)")
+                return
+            }
+            
+            guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+                print("HTTP error: \(response.debugDescription)")
+                return
+            }
+            
+            guard let data = data else {
+                print("No data received")
+                return
+            }
+            
+            do {
+                let eventDetailsResponse = try JSONDecoder().decode(EventsResponse.self, from: data)
+                
+                DispatchQueue.main.async {
+                    self?.eventDetails = eventDetailsResponse.data
                 }
             } catch let decodingError {
                 print("Decoding error: \(decodingError.localizedDescription)")

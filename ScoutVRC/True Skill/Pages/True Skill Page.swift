@@ -10,20 +10,28 @@ import SwiftUI
 struct True_Skill_Page: View {
     @StateObject var trueSkillModel = TrueSkill_Request()
     @State private var searchTerm = ""
-    
+
     var filteredTeams: [TrueSkillTeam] {
         if searchTerm.isEmpty {
             return trueSkillModel.trueSkillTeams
         } else {
             return trueSkillModel.trueSkillTeams.filter { team in
-                team.team_number.contains(searchTerm) || team.team_name.contains(searchTerm)
+                team.team_number.lowercased().contains(searchTerm.lowercased()) || team.team_name.lowercased().contains(searchTerm.lowercased())
             }
         }
     }
-    
+
     var body: some View {
         NavigationStack {
             VStack {
+                TextField("Search for Teams", text: $searchTerm)
+                    .padding(.horizontal, 15)
+                    .frame(height: 65)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .background(Color.gray.opacity(0.2))
+                    .cornerRadius(10)
+                    .padding()
+                
                 List(filteredTeams, id: \.self) { team in
                     VStack(alignment: .leading) {
                         HStack {
@@ -67,7 +75,6 @@ struct True_Skill_Page: View {
                     trueSkillModel.getTrueSkill()
                 }
             }
-            .searchable(text: $searchTerm, prompt: "Search for Teams")
         }
     }
 }

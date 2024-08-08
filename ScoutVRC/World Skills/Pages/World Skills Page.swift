@@ -14,7 +14,7 @@ struct World_Skills_Page: View {
     @State private var selectedGradeLevel: String = "High School"
     @State private var regions: [String] = ["All Regions"]
     private var gradeLevels = ["High School", "Middle School"]
-    @Environment(\.colorScheme) var colorScheme // Add this line to detect the color scheme
+    @Environment(\.colorScheme) var colorScheme
 
     private var filteredRankings: [SkillsRanking] {
         var results = viewModel.rankings
@@ -44,6 +44,17 @@ struct World_Skills_Page: View {
         NavigationStack {
             ZStack {
                 VStack {
+                    TextField("Search for Teams", text: $searchTerm)
+                        .padding(.horizontal, 15)
+                        .frame(height: 65)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .background(Color.gray.opacity(0.2))
+                        .cornerRadius(10)
+                        .padding()
+                        .onChange(of: searchTerm) {
+                            // Trigger update on search term change
+                        }
+
                     HStack {
                         Menu {
                             ForEach(regions, id: \.self) { region in
@@ -57,6 +68,7 @@ struct World_Skills_Page: View {
                             Text(selectedRegion)
                                 .fontWeight(.bold)
                                 .font(.system(size: 15))
+                                .accentColor(.primary)
                         }
 
                         Spacer()
@@ -74,8 +86,10 @@ struct World_Skills_Page: View {
                             Text(selectedGradeLevel)
                                 .fontWeight(.bold)
                                 .font(.system(size: 15))
+                                .accentColor(.primary)
                         }
-                    }.padding(EdgeInsets(top: 0, leading: 45, bottom: 0, trailing: 45))
+                    }
+                    .padding(EdgeInsets(top: 0, leading: 45, bottom: 0, trailing: 45))
 
                     List(filteredRankings, id: \.self) { ranking in
                         VStack(alignment: .leading) {
@@ -119,7 +133,6 @@ struct World_Skills_Page: View {
                     .scrollContentBackground(.hidden)
                 }
             }
-            .searchable(text: $searchTerm, prompt: "Search for Teams")
         }
     }
 }

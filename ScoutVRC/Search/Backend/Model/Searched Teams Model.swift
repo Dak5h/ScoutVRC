@@ -1,5 +1,5 @@
 //
-//  Searched Teams Model.swift
+//  SearchedTeamsModel.swift
 //  ScoutVRC
 //
 //  Created by Daksh Gupta on 7/14/24.
@@ -14,18 +14,21 @@ struct SearchedTeam: Hashable, Decodable {
     let organization: String?
     let grade: String?
     
-    enum CodingKeys: String, CodingKey {
+    private enum OuterCodingKeys: String, CodingKey {
         case item
+    }
+    
+    private enum ItemCodingKeys: String, CodingKey {
         case id
-        case number = "number"
+        case number
         case teamName = "team_name"
         case organization
         case grade
     }
     
     init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        let item = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .item)
+        let container = try decoder.container(keyedBy: OuterCodingKeys.self)
+        let item = try container.nestedContainer(keyedBy: ItemCodingKeys.self, forKey: .item)
         
         id = try item.decode(Int.self, forKey: .id)
         number = try item.decode(String.self, forKey: .number)

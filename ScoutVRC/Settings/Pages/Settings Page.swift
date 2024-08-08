@@ -83,25 +83,25 @@ struct Settings_Page: View {
                     .padding(.vertical, 5)
                 }
                 
-                Section("Notifications (Favorites)") {
-                    Toggle(isOn: $matchNotificationsEnabled) {
-                        Text("Match Notifications")
-                            .font(.headline)
-                    }
-                    .toggleStyle(SwitchToggleStyle(tint: .white))
-                    .onChange(of: matchNotificationsEnabled) { newValue in
-                        saveNotificationsChanges()
-                    }
-                    
-                    Toggle(isOn: $chatNotificationsEnabled) {
-                        Text("Message Notifications")
-                            .font(.headline)
-                    }
-                    .toggleStyle(SwitchToggleStyle(tint: .white))
-                    .onChange(of: chatNotificationsEnabled) { newValue in
-                        saveNotificationsChanges()
-                    }
-                }
+//                Section("Notifications (Favorites)") {
+//                    Toggle(isOn: $matchNotificationsEnabled) {
+//                        Text("Match Notifications")
+//                            .font(.headline)
+//                    }
+//                    .toggleStyle(SwitchToggleStyle(tint: .white))
+//                    .onChange(of: matchNotificationsEnabled) {
+//                        saveNotificationsChanges()
+//                    }
+//                    
+//                    Toggle(isOn: $chatNotificationsEnabled) {
+//                        Text("Message Notifications")
+//                            .font(.headline)
+//                    }
+//                    .toggleStyle(SwitchToggleStyle(tint: .white))
+//                    .onChange(of: chatNotificationsEnabled) {
+//                        saveNotificationsChanges()
+//                    }
+//                }
                 
                 Section("Actions") {
                     Button(action: signOut) {
