@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Combine
 
 class TrueSkill_Request: ObservableObject {
     @Published var trueSkillTeams: [TrueSkillTeam] = []
@@ -37,7 +36,6 @@ class TrueSkill_Request: ObservableObject {
             
             do {
                 let trueSkillResponse = try JSONDecoder().decode([TrueSkillTeam].self, from: data)
-                
                 DispatchQueue.main.async {
                     self?.trueSkillTeams = trueSkillResponse
                 }

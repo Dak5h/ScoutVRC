@@ -16,7 +16,7 @@ struct True_Skill_Page: View {
             return trueSkillModel.trueSkillTeams
         } else {
             return trueSkillModel.trueSkillTeams.filter { team in
-                team.team_number.lowercased().contains(searchTerm.lowercased()) || team.team_name.lowercased().contains(searchTerm.lowercased())
+                team.teamNumber.lowercased().contains(searchTerm.lowercased()) || team.teamName.lowercased().contains(searchTerm.lowercased())
             }
         }
     }
@@ -35,13 +35,13 @@ struct True_Skill_Page: View {
                 List(filteredTeams, id: \.self) { team in
                     VStack(alignment: .leading) {
                         HStack {
-                            Text("\(team.ts_ranking). \(team.team_number)")
+                            Text("\(team.tsRanking ?? 0). \(team.teamNumber)")
                                 .fontWeight(.bold)
                                 .foregroundStyle(.primary)
                             
                             Spacer()
                             
-                            Text("\(team.team_name)")
+                            Text("\(String(describing: team.teamName))")
                                 .fontWeight(.semibold)
                                 .foregroundStyle(.primary.opacity(0.5))
                                 .lineLimit(1)
@@ -54,11 +54,11 @@ struct True_Skill_Page: View {
                                     .contentShape(Rectangle())
                                     .onTapGesture {}
                                 Menu {
-                                    Text("True Skill: \(String(format: "%.1f", team.trueskill))")
-                                    Text("Winrate: \(String(format: "%.1f", team.total_winning_percent))%")
-                                    Text("Record: \(Int(team.total_wins)) - \(Int(team.total_losses)) - \(Int(team.total_ties))")
+                                    Text("True Skill: \(String(format: "%.1f", team.trueSkill ?? 0))")
+                                    Text("Winrate: \(String(format: "%.1f", team.totalWinningPercent ?? 0))%")
+                                    Text("Record: \(Int(team.totalWins ?? 0)) - \(Int(team.totalLosses ?? 0)) - \(Int(team.totalTies ?? 0))")
                                     
-                                    Link(destination: URL(string: "https://www.robotevents.com/teams/V5RC/\(team.team_number)")!) {
+                                    Link(destination: URL(string: "https://www.robotevents.com/teams/V5RC/\( team.teamNumber)")!) {
                                         Label("Team Link", systemImage: "link")
                                     }
                                 } label: {
