@@ -51,7 +51,7 @@ struct World_Skills_Page: View {
                         .background(Color.gray.opacity(0.2))
                         .cornerRadius(10)
                         .padding()
-                        .onChange(of: searchTerm) {
+                        .onChange(of: searchTerm) { newValue in
                             // Trigger update on search term change
                         }
 
@@ -127,7 +127,7 @@ struct World_Skills_Page: View {
                     .onAppear {
                         fetchRankings()
                     }
-                    .onChange(of: viewModel.rankings) { _, _ in
+                    .onChange(of: viewModel.rankings) { _ in
                         fetchRegions()
                     }
                     .scrollContentBackground(.hidden)

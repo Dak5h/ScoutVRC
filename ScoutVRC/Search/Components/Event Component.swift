@@ -88,7 +88,7 @@ struct Event_Component: View {
                         }
                     }
                 }
-                .onChange(of: searchText) {
+                .onChange(of: searchText) { _ in
                     eventsModel.getSearchedEvents(searchQuery: searchText)
                 }
                 .onAppear {
