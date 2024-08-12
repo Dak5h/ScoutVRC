@@ -9,8 +9,8 @@ import Foundation
 
 struct TrueSkillTeam: Hashable, Decodable {
     let tsRanking: Int?
-    let teamNumber: String
-    let teamName: String
+    let teamNumber: String?
+    let teamName: String?
     let trueSkill: Double?
     let totalWins: Double?
     let totalLosses: Double?

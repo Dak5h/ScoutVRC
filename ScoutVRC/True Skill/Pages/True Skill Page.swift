@@ -16,7 +16,8 @@ struct True_Skill_Page: View {
             return trueSkillModel.trueSkillTeams
         } else {
             return trueSkillModel.trueSkillTeams.filter { team in
-                team.teamNumber.lowercased().contains(searchTerm.lowercased()) || team.teamName.lowercased().contains(searchTerm.lowercased())
+                (team.teamNumber?.lowercased().contains(searchTerm.lowercased()) ?? false) ||
+                (team.teamName?.lowercased().contains(searchTerm.lowercased()) ?? false)
             }
         }
     }
@@ -35,16 +36,20 @@ struct True_Skill_Page: View {
                 List(filteredTeams, id: \.self) { team in
                     VStack(alignment: .leading) {
                         HStack {
-                            Text("\(team.tsRanking ?? 0). \(team.teamNumber)")
-                                .fontWeight(.bold)
-                                .foregroundStyle(.primary)
+                            if let ranking = team.tsRanking, let number = team.teamNumber {
+                                Text("\(ranking). \(number)")
+                                    .fontWeight(.bold)
+                                    .foregroundStyle(.primary)
+                            }
                             
                             Spacer()
                             
-                            Text("\(String(describing: team.teamName))")
-                                .fontWeight(.semibold)
-                                .foregroundStyle(.primary.opacity(0.5))
-                                .lineLimit(1)
+                            if let name = team.teamName {
+                                Text("\(name)")
+                                    .fontWeight(.semibold)
+                                    .foregroundStyle(.primary.opacity(0.5))
+                                    .lineLimit(1)
+                            }
                             
                             Spacer()
                             
@@ -54,12 +59,20 @@ struct True_Skill_Page: View {
                                     .contentShape(Rectangle())
                                     .onTapGesture {}
                                 Menu {
-                                    Text("True Skill: \(String(format: "%.1f", team.trueSkill ?? 0))")
-                                    Text("Winrate: \(String(format: "%.1f", team.totalWinningPercent ?? 0))%")
-                                    Text("Record: \(Int(team.totalWins ?? 0)) - \(Int(team.totalLosses ?? 0)) - \(Int(team.totalTies ?? 0))")
+                                    if let skill = team.trueSkill {
+                                        Text("True Skill: \(String(format: "%.1f", skill))")
+                                    }
+                                    if let winrate = team.totalWinningPercent {
+                                        Text("Winrate: \(String(format: "%.1f", winrate))%")
+                                    }
+                                    if let wins = team.totalWins, let losses = team.totalLosses, let ties = team.totalTies {
+                                        Text("Record: \(Int(wins)) - \(Int(losses)) - \(Int(ties))")
+                                    }
                                     
-                                    Link(destination: URL(string: "https://www.robotevents.com/teams/V5RC/\( team.teamNumber)")!) {
-                                        Label("Team Link", systemImage: "link")
+                                    if let number = team.teamNumber {
+                                        Link(destination: URL(string: "https://www.robotevents.com/teams/V5RC/\(number)")!) {
+                                            Label("Team Link", systemImage: "link")
+                                        }
                                     }
                                 } label: {
                                     Image(systemName: "info.circle")
